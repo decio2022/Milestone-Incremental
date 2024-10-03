@@ -14,7 +14,21 @@ function getStartOptions() {
 		forceOneTab: false,
 		oldStyle: false,
 		tooltipForcing: true,
+		decimal: 3,
 	}
+}
+let notations = ['Standard' , 'Scientific' , 'Mixed Scientific', 'Engineering' , "Mixed Engineering" , "Hyper-E" , "Letters" , "Hexa" , "Binary" , "Genetic" , "Chemistry", "Blind", "Cancer"]
+
+
+
+let decimals = [3, 4, 5, 6, 7]
+
+function changeNotation() {
+	player.notation = notations[(notations.indexOf(player.notation) + 1) % notations.length]
+}
+
+function changeDecimalPlaces() {
+  player.decimal = decimals[(notations.indexOf(player.decimal) + 1) % decimals.length]
 }
 
 function toggleOpt(name) {
@@ -26,6 +40,7 @@ function toggleOpt(name) {
 		changeTreeQuality();
 	if (name == "oldStyle")
 		updateStyle();
+	if (name == "autosave") player.autosave = options.autosave
 }
 var styleCooldown = 0;
 function updateStyle() {
