@@ -1,13 +1,13 @@
 let modInfo = {
-	name: "The ??? Tree",
+	name: "Milestone Incremental",
 	id: "mymod",
-	author: "nobody",
+	author: "Decio2023",
 	pointsName: "points",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
 	discordLink: "",
-	initialStartPoints: new Decimal (10), // Used for hard resets and new players
+	initialStartPoints: new Decimal (0), // Used for hard resets and new players
 	offlineLimit: 1,  // In hours
 }
 
